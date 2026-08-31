@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏙️ City Car Motorcycle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Título -->
+        <h1>🏙️ City Car Motorcycle</h1>
+        
+        <!-- Controles -->
+        <div class="controls">
+            <button onclick="toggleAnimation()">⏯️ Pausar/Retomar</button>
+            <button onclick="changeSpeed('faster')">⚡ Mais Rápido</button>
+            <button onclick="changeSpeed('slower')">🐢 Mais Devagar</button>
+            <button onclick="resetPositions()">🔄 Resetar</button>
+        </div>
+
+        <!-- Container da Cena -->
+        <div id="scene">
+            <img src="assets/cidade.jpg" alt="Cidade" id="city-bg">
+            
+            <div id="vehicles">
+                <img src="assets/carro.png" alt="Carro" id="car" class="vehicle">
+                <img src="assets/moto.png" alt="Moto" id="motorcycle" class="vehicle">
+            </div>
+
+            <!-- Efeitos de IA (partículas) -->
+            <canvas id="ai-effects"></canvas>
+        </div>
+
+        <!-- Status -->
+        <div id="status">
+            <span>🚗 Carro: <span id="car-pos">0</span>px</span>
+            <span>🏍️ Moto: <span id="moto-pos">0</span>px</span>
+            <span>⚡ Velocidade: <span id="speed-display">1x</span></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
